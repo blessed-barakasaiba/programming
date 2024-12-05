@@ -1,0 +1,30 @@
+<GameScreen>:
+    paddle: paddle
+
+    MDLabel:
+        text: "Score: " + str(root.score)
+        halign: 'center'
+        size_hint: None, None
+        size: 200, 50
+        pos_hint: {'center_x': 0.5, 'top': 1}
+        font_style: 'H4'
+
+    Paddle:
+        id: paddle
+        size_hint: None, None
+        size: 100, 20
+        pos_hint: {'center_x': 0.5, 'y': 0.05}
+        canvas:
+            Color:
+                rgb: 0, 0, 1
+            Rectangle:
+                pos: self.pos
+                size: self.size
+
+<Ball>:
+    canvas:
+        Color:
+            rgb: 1, 0, 0
+        Ellipse:
+            pos: self.pos
+            size: self.size

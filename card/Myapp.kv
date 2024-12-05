@@ -1,0 +1,112 @@
+MDScreen:
+    MDScrollView:
+        MDGridLayout:
+            id: grid
+            cols: app.get_number_of_columns()  # Dynamically set columns based on screen size
+            padding: dp(10)
+            spacing: dp(10)
+            adaptive_height: True
+
+            # Example of multiple cards
+            MDCard:
+                size_hint: (.45, None)
+                height: dp(250)
+                elevation: 2
+                radius: [dp(15), dp(15), dp(15), dp(15)]
+
+                MDBoxLayout:
+                    orientation: 'vertical'
+                    padding: 0
+                    spacing: 0
+
+                    FitImage:
+                        source: 'back.jpg'
+                        size_hint_y: None
+                        height: dp(150)
+                        allow_stretch: True
+
+                    MDBoxLayout:
+                        orientation: 'vertical'
+                        padding: dp(10)
+                        spacing: dp(5)
+
+                        MDLabel:
+                            text: "Cost: 35000"
+                            theme_text_color: 'Primary'
+                            font_style: 'H6'
+                            halign: 'center'
+
+                        MDLabel:
+                            text: "Location: Iyunga"
+                            theme_text_color: 'Secondary'
+                            font_style: 'Subtitle1'
+                            halign: 'center'
+
+                    MDBoxLayout:
+                        orientation: 'horizontal'
+                        padding: dp(10)
+                        spacing: dp(5)
+                        pos_hint: {'center_x': .5}
+
+                        MDFlatButton:
+                            text: "Contacts"
+                            theme_text_color: 'Primary'
+                            font_style: 'H6'
+                            pos_hint: {'center_x':.5}
+
+                        MDIconButton:
+                            icon: 'heart-outline'
+                            theme_text_color: 'Custom'
+                            text_color: 1, 0, 0, 1
+                            user_font_size: '24sp'
+            MDCard:
+                size_hint: (.45, None)
+                height: dp(250)
+                elevation: 2
+                radius: [dp(15), dp(15), dp(15), dp(15)]
+
+                MDBoxLayout:
+                    orientation: 'vertical'
+                    padding: 0
+                    spacing: 0
+
+                    FitImage:
+                        source: 'back.jpg'
+                        size_hint_y: None
+                        height: dp(150)
+                        allow_stretch: True
+
+                    MDBoxLayout:
+                        orientation: 'vertical'
+                        padding: dp(10)
+                        spacing: dp(5)
+
+                        MDLabel:
+                            text: "Cost: 35000"
+                            theme_text_color: 'Primary'
+                            font_style: 'H6'
+                            halign: 'center'
+
+                        MDLabel:
+                            text: "Location: Iyunga"
+                            theme_text_color: 'Secondary'
+                            font_style: 'Subtitle1'
+                            halign: 'center'
+
+                    MDBoxLayout:
+                        orientation: 'horizontal'
+                        padding: dp(10)
+                        spacing: dp(5)
+                        pos_hint: {'center_x': .5}
+
+                        MDFlatButton:
+                            text: "Contacts"
+                            theme_text_color: 'Primary'
+                            font_style: 'H6'
+                            pos_hint: {'center_x':.5}
+
+                        MDIconButton:
+                            icon: 'heart-outline'
+                            theme_text_color: 'Custom'
+                            text_color: 1, 0, 0, 1
+                            user_font_size: '24sp'                

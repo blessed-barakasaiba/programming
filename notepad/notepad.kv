@@ -1,0 +1,36 @@
+<NotepadScreen>:
+    name: "notepad_screen"
+    
+    MDBoxLayout:
+        orientation: "vertical"
+        padding: dp(10)
+        spacing: dp(10)
+
+        MDToolbar:
+            title: "Notepad"
+            elevation: 10
+            left_action_items: [["menu", lambda x: app.menu_callback()]]
+            right_action_items: [["information", lambda x: app.show_info()]]
+
+        MDTextField:
+            id: text_input
+            hint_text: "Write your notes here..."
+            multiline: True
+            mode: "rectangle"
+            size_hint_y: 0.8
+
+        MDBoxLayout:
+            size_hint_y: 0.1
+            spacing: dp(10)
+
+            MDRaisedButton:
+                text: "Save"
+                on_release: app.save_note()
+
+            MDRaisedButton:
+                text: "Load"
+                on_release: app.load_note()
+
+            MDRaisedButton:
+                text: "Clear"
+                on_release: app.clear_note()
